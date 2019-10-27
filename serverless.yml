@@ -1,0 +1,20 @@
+service: middylearning
+provider:
+  name: aws
+  runtime: nodejs10.x
+  stage: ${opt:stage, self:custom.defaultStage}
+  profile: ${self:custom.profiles.${self:provider.stage}}
+custom:
+  defaultStage: dev
+  profiles:
+    dev: personal
+    prod: prodProfile
+functions:
+  hello:
+    handler: src/hello.handler
+    name: helloworld
+    events:
+      - http:
+          path: /
+          method: GET
+

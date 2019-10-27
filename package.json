@@ -1,0 +1,16 @@
+{
+  "name": "middyLearning",
+  "version": "1.0.0",
+  "description": "practicing middy middileware",
+  "scripts": {
+    "deploy": "sls deploy",
+    "invokeL": "sls invoke local -f"
+  },
+  "main": "index.js",
+  "author": "learningbot",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "middy": "^0.30.4"
+  }
+}
